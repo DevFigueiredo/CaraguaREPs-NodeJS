@@ -1,6 +1,11 @@
 //Pacote de rotas
 const express = require('express');
 
+const User = require('../models/User');
+const Project = require('../models/Project');
+const Task = require('../models/Task');
+
+
 const authMiddleware = require('../middlewares/auth')
 const router = express.Router();
 router.use(authMiddleware);
