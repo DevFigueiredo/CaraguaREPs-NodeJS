@@ -116,7 +116,6 @@ try {
           res.json(error);
         }
         console.log("email is send");
-        console.log(info);
         res.json(info)
       });
 
@@ -128,6 +127,42 @@ try {
 }
 
 });
+//Acaba aqui a rota de recuperação de usuário
+
+//Começa aqui a rota de Reset de Senha do Usuário
+router.post('/reset_password', async (req, res) => {
+const {email, token, password} = req.body;
+
+//Realiza a consulta do usuário no banco
+const user = await User.findOne({email}).select('+passwordResetToken passwordResetExpiresToken');
+//Verificar se existe algum usuário do no banco caso não ele retorna um erro
+if(!user)return res.status(400).send({error: "User not exist's"})
+
+if(token !== user.passwordResetToken){
+  res.status(400).send({error: 'Token invalid'})
+}
+DateTimeNow = new Date();
+
+if(DateTimeNow>user.passwordResetExpiresToken){
+  res.status(400).send({error: 'Token Expired, Request again a new Forgot password'})
+}
+
+user.password = password;
+await user.save();
+user.password = undefined;
+res.send(user);
+
+
+try{
+
+}catch(err){
+res.status(400).send({error: "Cannot possible reset password"});
+}
+
+});
+
+//Acaba aqui A Rota de Reset de Senha do Usuário
+
 
 
 
