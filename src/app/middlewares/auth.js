@@ -29,7 +29,7 @@ module.exports =(req, res, next)=>{
     jwt.verify(token, authConfig.secret, (err, decoded) => {
         if(err) res.status(401).send({error: "Token Invalid"})
          
-        req.userId = decoded.params.id;
+        req.body.user = decoded.params.id;
 
         //Caso tudo acima estiver OK ele continua o processo de logon!
        return next(); 
