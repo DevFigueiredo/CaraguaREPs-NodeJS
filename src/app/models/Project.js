@@ -2,7 +2,7 @@ const mongoose = require('../../database');
 
 //type = tipo do campo, required = campo obrigatorio, unique = valor unico, lowercase = converter em caixa baixa, select = escolhe se será possível consultar este campo no select ou nao
 const ProjectSchema = new mongoose.Schema({
-title:{
+title:{ 
    type: String, 
    required: true
 },
