@@ -14,7 +14,7 @@ router.use(authMiddleware);
 //Consulta de Todos Projetos
 router.get('/', async (req, res) => {
 try {
-  const projects = await Project.find();
+  const projects = await Project.find().populate('user');
   res.send(projects)  
 } catch (err) {
   res.status(400).send({error: 'Problem to list all projects'})
@@ -23,11 +23,11 @@ try {
 });
 
 
-//Consulta do Projeto especifici
+//Consulta do Projeto especificio
 router.get('/:project_id', async (req, res) => {
   const {project_id} = req.params;
  try{
-  const projects = await Project.findById(project_id);
+  const projects = await Project.findById(project_id).populate('user');
   res.send(projects)  
 } catch (err) {
   res.status(400).send({error: 'Problem to list all projects'})
@@ -37,8 +37,24 @@ router.get('/:project_id', async (req, res) => {
 
 //Criação de Projeto
 router.post('/', async (req, res) => {
+  //Recebe apenas os parametros importantes para inserção no banco de dados
+  const {title, description, tasks} = req.body;
+
   try {
-     const project = await Project.create(req.body);
+    //Insere o projeto e referencia o usuário
+    const project = await Project.create({title, description, user: req.userId});
+    
+    //Mapeia todas as Tarefas uma a uma
+    await Promise.all(tasks.map(async task=>{
+      //Criou um objeto no Model importado de Tarefas 
+      const projectTask = new Task({...task, project: project._id});
+
+      await projectTask.save();
+      project.tasks.push(projectTask);
+    }));
+    await project.save();
+
+
     res.send({message: 'A new project created with success'});
   } catch (err) {
     console.log(err);
@@ -55,7 +71,17 @@ router.put('/:project_id', async (req, res) => {
 
 //Deletar o Projeto especifico
 router.delete('/:project_id', async (req, res) => {
-  res.send({user: req.userId})
+  const {project_id} = req.params;
+  try{
+    const projects = await Project.findByIdAndRemove(project_id);
+
+    if(!projects) return res.status(400).send({error: 'Project not found'});
+    
+    res.send({error: projects.title+' deleted with success'});
+    
+  } catch (err) {
+    res.status(400).send({error: 'Problem to delete this project'})
+  }
 });
 
 module.exports = app => app.use('/projects', router);
