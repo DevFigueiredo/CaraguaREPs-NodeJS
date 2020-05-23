@@ -32,6 +32,11 @@ createdAt:{
   type: Date,
   default: Date.now
 },
+
+UpdatedAt:{
+  type: Date,
+  default: Date.now
+},
 });
 
 

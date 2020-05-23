@@ -30,6 +30,10 @@ createdAt:{
   type: Date,
   default: Date.now
 },
+UpdatedAt:{
+    type: Date,
+    default: Date.now
+  },
 });
 
 const Task = mongoose.model('Task', TaskSchema);
