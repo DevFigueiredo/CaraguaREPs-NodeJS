@@ -14,7 +14,7 @@ router.use(authMiddleware);
 //Consulta de Todos Projetos
 router.get('/', async (req, res) => {
 try {
-  const projects = await Project.find().populate('user');
+  const projects = await Project.find().populate(['user', 'tasks']);
   res.send(projects)  
 } catch (err) {
   res.status(400).send({error: 'Problem to list all projects'})
@@ -27,7 +27,7 @@ try {
 router.get('/:project_id', async (req, res) => {
   const {project_id} = req.params;
  try{
-  const projects = await Project.findById(project_id).populate('user');
+  const projects = await (await Project.findById(project_id).populate(['user', 'tasks']));
   res.send(projects)  
 } catch (err) {
   res.status(400).send({error: 'Problem to list all projects'})
@@ -46,18 +46,21 @@ router.post('/', async (req, res) => {
     
     //Mapeia todas as Tarefas uma a uma
     await Promise.all(tasks.map(async task=>{
-      //Criou um objeto no Model importado de Tarefas 
+      //Criou um objeto no Model 
       const projectTask = new Task({...task, project: project._id});
-
+      //Insere as tasks na tabela de Task's
       await projectTask.save();
+     
+      //Insere na tabela de projeto o objeto da Task
       project.tasks.push(projectTask);
     }));
+
+
     await project.save();
 
 
     res.send({message: 'A new project created with success'});
   } catch (err) {
-    console.log(err);
     return res.status(400).send({error:"Error to created Project"})
   }
 });
@@ -65,7 +68,40 @@ router.post('/', async (req, res) => {
 
 //Atualizaçao do Projeto especifico
 router.put('/:project_id', async (req, res) => {
-  res.send({user: req.userId})
+ //Recebe apenas os parametros importantes para inserção no banco de dados
+ const {title, description, tasks} = req.body;
+
+ try {
+   //Pesquisao projeto o projeto e atualiza os dados
+   var project = await Project.findByIdAndUpdate(req.params.project_id, 
+    //Atributos da tabela com seus parametros armazenados
+    {title, description, user: req.userId},
+    //Faz o retornar os dados do projeto atualizados para variavel
+    {new: true}
+    );
+
+    //Esvazia o campo de tarefas retornado dos dados acima do projeto
+    project.tasks = [];
+    //EM seguida remove todas tarefas do banco do ID retornado do projeto 
+    Task.remove({project: project._id});
+
+    //Mapeia todas as Tarefas uma a uma
+   await Promise.all(tasks.map(async task=>{
+     //Criou um objeto no Model importado de Tarefas 
+     const projectTask = new Task({...task, project: project._id});
+
+     await projectTask.save();
+     project.tasks.push(projectTask);
+   }));
+   await project.save();
+
+
+   res.send({message: 'The project updated with success'});
+ } catch (err) {
+   return res.status(400).send({error:"Error to updated Project"})
+ }
+
+
 });
 
 
