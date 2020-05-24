@@ -70,7 +70,6 @@ router.post('/', async (req, res) => {
 router.put('/:project_id', async (req, res) => {
  //Recebe apenas os parametros importantes para inserção no banco de dados
  const {title, description, tasks} = req.body;
-
  try {
    //Pesquisao projeto o projeto e atualiza os dados
    var project = await Project.findByIdAndUpdate(req.params.project_id, 
