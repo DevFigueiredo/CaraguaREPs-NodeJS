@@ -2,7 +2,11 @@ const mongoose = require('../../database');
 
 //type = tipo do campo, required = campo obrigatorio, unique = valor unico, lowercase = converter em caixa baixa, select = escolhe se será possível consultar este campo no select ou nao
 const RepublicSchema = new mongoose.Schema({
-title:{ 
+  status:{ 
+    type: Boolean, 
+    default: true
+  },
+  title:{ 
    type: String, 
    required: true
 },
@@ -12,6 +16,10 @@ description:{
 },
 republic_like:{//Male, Female, Other, All
   type: String, 
+  required: true
+},
+rules:{
+  type: String,
   required: true
 },
 address: {
