@@ -3,6 +3,9 @@ import Constants from 'expo-constants';
 import * as Font from 'expo-font';
 
   export default StyleSheet.create({
+    Top:{
+    paddingTop: 10
+    },
     scrollView:{
         backgroundColor: '#FFF',
         width: "100%",
@@ -10,17 +13,16 @@ import * as Font from 'expo-font';
         
      },
     container: {        
-    paddingTop: Constants.statusBarHeight -30,  
-     paddingVertical: 24,
      paddingHorizontal: 24,
+    },
+    Navbar:{
+     paddingBottom: 10,
+     backgroundColor: '#FFF'
     },
     TopBar:{
       width: '100%',
-      paddingTop: 5,
-      flexDirection:'row',     
-    },
-    Top:{
-      paddingTop: Constants.statusBarHeight +10,  
+      flexDirection:'row',  
+         
     },
     Filter:{
       flexDirection:'column',
@@ -47,7 +49,8 @@ import * as Font from 'expo-font';
 
     Filtered:{
       flexDirection: 'row',
-      paddingTop: 10,    
+      paddingTop: 10,  
+  
     },
     TextFiltered:{
       flexDirection:'column',
