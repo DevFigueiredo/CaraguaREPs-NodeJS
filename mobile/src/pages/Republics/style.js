@@ -3,16 +3,13 @@ import Constants from 'expo-constants';
 import * as Font from 'expo-font';
 
   export default StyleSheet.create({
-    Top:{
-    paddingTop: 10
-    },
     scrollView:{
-        backgroundColor: '#FFF',
         width: "100%",
         height: "100%",
         
      },
-    container: {        
+    container: {   
+      backgroundColor: '#FFF',     
      paddingHorizontal: 24,
     },
     Navbar:{
@@ -22,6 +19,7 @@ import * as Font from 'expo-font';
     TopBar:{
       width: '100%',
       flexDirection:'row',  
+      alignSelf: 'center',
          
     },
     Filter:{
@@ -29,12 +27,13 @@ import * as Font from 'expo-font';
       justifyContent: 'center',
       height: 50,
       alignItems: 'center',
+      
     },
     Search:{
      flexDirection:'column',
      fontFamily: 'RobotoThin',
      width: '80%',
-     height: 50,
+     height: 60,
     },
     InputSearch:{
       paddingLeft: 10,
@@ -48,13 +47,19 @@ import * as Font from 'expo-font';
     },
 
     Filtered:{
-      flexDirection: 'row',
-      paddingTop: 10,  
-  
+     width: '100%',
+      backgroundColor: '#FFF',
+      alignSelf: 'center',
+      flexDirection: 'row',  
     },
-    TextFiltered:{
+    FilterImage:{
+      width:60, 
+      height: '100%'
+    },
+    TextFiltered:{     
       flexDirection:'column',
       color: '#8F92A1',
+      textAlign: 'center',
       marginRight: 10,
       maxWidth: 80,
       fontSize: 14,
@@ -65,11 +70,19 @@ import * as Font from 'expo-font';
     },
     ListRepublics:{
      paddingTop: 10,
-     width: '100%',
+     maxWidth: '100%',
+     flexDirection: 'row',
+     flexWrap:'wrap',
     },
     Republic:{
+      marginEnd: 'auto',
+      flexDirection: 'column',
+      marginBottom: 30,
+      maxWidth: 400,
       width: '100%',
-    },
+      alignSelf: 'center',
+
+      },
     RepublicTitle:{
       fontSize: 20,
       textAlign: 'left',
