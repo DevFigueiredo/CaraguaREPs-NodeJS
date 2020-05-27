@@ -6,11 +6,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {Text, View} from 'react-native';
 import Republics from '../src/pages/Republics';
 import User from '../src/pages/User';
-// // import UserMessages from '../src/pages/UserMessages';
+import Messages from '../src/pages/UserMessages';
 
-function WindowsComponent ({title}){
- return (<Text>{title}</Text>)
-}
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -30,6 +27,18 @@ export default function Home() {
       }}
       
       />
+      
+      <Tab.Screen
+        name="Messages"
+        component={Messages}
+        options={{
+          tabBarLabel: 'Messages',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="message" color={color} size={26} />
+          ),
+        }}
+      />
+      
       <Tab.Screen
         name="Profile"
         component={User}
@@ -40,16 +49,7 @@ export default function Home() {
           ),
         }}
       />
-        <Tab.Screen
-        name="Message"
-        component={User}
-        options={{
-          tabBarLabel: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account" color={color} size={26} />
-          ),
-        }}
-      />
+        
        
     </Tab.Navigator>
   );
