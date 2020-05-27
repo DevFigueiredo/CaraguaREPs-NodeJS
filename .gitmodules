@@ -1,0 +1,3 @@
+[submodule "CaraguaREPs-NodeJS"]
+	path = CaraguaREPs-NodeJS
+	url = https://github.com/DevFigueiredo/CaraguaREPs-NodeJS.git
