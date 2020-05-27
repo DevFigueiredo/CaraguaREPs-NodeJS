@@ -40,7 +40,7 @@ export default function Login( {navigation} ) {
 
   <TouchableHighlight
   style={styles.Button}>
-    <Text style={styles.TextLoginButton} onPress={ ()=> navigation.navigate('Republics') }>Login</Text>
+    <Text style={styles.TextLoginButton} onPress={ ()=> navigation.navigate('Home') }>Login</Text>
     
 </TouchableHighlight>
 
