@@ -2,11 +2,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import Login from './src/pages/Login';
 
-import Republics from './src/pages/Republics';
-import Login from './src/pages/Login/indexs';
-
-// import BottomMenu from './routes/bottomMenu.routes';
+import Home from './routes/bottomMenu.routes';
 
  const AppStack = createStackNavigator();
 
@@ -15,9 +13,8 @@ export default function Routes() {
     <NavigationContainer initialRouteName="Login">
     <AppStack.Navigator screenOptions={{headerShown: false}}>
     
-    <AppStack.Screen name="Republics" component={Republics} />
-    <AppStack.Screen name="Home" component={Login} />
-    <AppStack.Screen name="Republics" component={Republics} />
+    <AppStack.Screen name="Login" component={Login} />
+    <AppStack.Screen name="Home" component={Home} />
 
     </AppStack.Navigator>
     </NavigationContainer>
