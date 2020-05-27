@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import * as Font from 'expo-font';
+import { max } from 'react-native-reanimated';
 
   export default StyleSheet.create({
     scrollView:{
@@ -14,21 +15,14 @@ import * as Font from 'expo-font';
   
     TopLogin:{
       width: '100%',
-      height: 300,
-      minHeight: 200,
+      height: '100%',
       maxHeight: 300,
-      top: '0%',
-      paddingVertical: 24,
-      paddingHorizontal: 24,
-      backgroundColor: '#20232A',
+
     },
     TopImageLogin:{
-        position: 'absolute',
-        width: 400,
-        height: 300,
+        width: '100%',
+        height: '100%',
         top: '0%',
-        paddingVertical: 24,
-        paddingHorizontal: 24,
 
     },
     GroupLogin:{
@@ -38,9 +32,20 @@ import * as Font from 'expo-font';
       top: '-5%',
       backgroundColor: '#FFF',
       borderTopRightRadius: 24,
-      borderTopLeftRadius: 24
+      borderTopLeftRadius: 24,
+       alignItems: 'center',
+      
+
+     },
+    GroupLoginContainer:{
+      width: '100%',
+      maxWidth: 400,
+      borderTopRightRadius: 24,
+      borderTopLeftRadius: 24,
+
     },
     Input:{
+      width:'100%',
       marginTop: 40,
       fontFamily: "RobotoBlack",
       borderColor: '#8F92A1',

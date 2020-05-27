@@ -7,19 +7,19 @@ export default function Login( {navigation} ) {
 
   return (
     <ScrollView style={styles.scrollView}>
-
-    <View style={styles.container} >
     <View style={styles.TopLogin}>
     <ImageBackground
     source={require('../../images/estudantes.jpg')}
     style={styles.TopImageLogin}
     imageStyle={{
-      resizeMode: 'cover' // works only here!
     }}
 >
 </ImageBackground>
     </View>
+    <View style={styles.container} >
+
     <View style={styles.GroupLogin}>
+    <View style={styles.GroupLoginContainer}>
     <Text style={styles.TextWelcome}>Seja Bem vindo,</Text>
     <Text style={styles.textNormal}>Você está no CaraguaREP's 2.0</Text>
     <TextInput
@@ -53,6 +53,7 @@ export default function Login( {navigation} ) {
     <Text style={styles.TextAlternativeButton}>Sou Novo Aqui!</Text>
 </TouchableHighlight>
 
+</View>
       </View>
   </View>
 </ScrollView>
