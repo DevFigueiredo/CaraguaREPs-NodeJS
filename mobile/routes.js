@@ -3,16 +3,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-import Home from './src/pages/Home';
 import Republics from './src/pages/Republics';
+import Login from './src/pages/Login/indexs';
+
+// import BottomMenu from './routes/bottomMenu.routes';
+
  const AppStack = createStackNavigator();
 
 export default function Routes() {
   return (
-    <NavigationContainer initialRouteName="Home">
+    <NavigationContainer initialRouteName="Login">
     <AppStack.Navigator screenOptions={{headerShown: false}}>
     
-    <AppStack.Screen name="Home" component={Home} />
+    <AppStack.Screen name="Republics" component={Republics} />
+    <AppStack.Screen name="Home" component={Login} />
     <AppStack.Screen name="Republics" component={Republics} />
 
     </AppStack.Navigator>

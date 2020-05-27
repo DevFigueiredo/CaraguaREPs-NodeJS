@@ -3,7 +3,7 @@ import {Text, View, TextInput,ScrollView, ImageBackground, TouchableHighlight } 
 import styles from './style';
 
 
-export default function Home( {navigation} ) {
+export default function Login( {navigation} ) {
 
   return (
     <ScrollView style={styles.scrollView}>

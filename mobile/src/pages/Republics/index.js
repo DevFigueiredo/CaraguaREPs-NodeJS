@@ -2,10 +2,9 @@ import * as React from 'react';
 import {Text, View, TextInput,ScrollView, Image, ImageBackground } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
-import style from './style';
 
 
-export default function Home( {navigation} ) {
+export default function Republics( {navigation} ) {
 
   return (
 <ScrollView style={styles.scrollView}>
