@@ -3,9 +3,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 import Republics from '../src/pages/Republics';
 import User from '../src/pages/User';
+// // import UserMessages from '../src/pages/UserMessages';
+
+function WindowsComponent ({title}){
+ return (<Text>{title}</Text>)
+}
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -35,6 +40,17 @@ export default function Home() {
           ),
         }}
       />
+        <Tab.Screen
+        name="Message"
+        component={User}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" color={color} size={26} />
+          ),
+        }}
+      />
+       
     </Tab.Navigator>
   );
 }
