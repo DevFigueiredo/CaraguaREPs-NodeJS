@@ -1,17 +1,40 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import {Text} from 'react-native';
-function WildCard({title}){
-  return <Text>WildCard {title}</Text>
-}
+import Republics from '../src/pages/Republics';
+import User from '../src/pages/User';
 
-const Tab = createBottomTabNavigator();
 
-export default function bottomMenu() {
+const Tab = createMaterialBottomTabNavigator();
+
+export default function Home() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Page1" component={()=><WildCard title="Page1"/>} />
-      <Tab.Screen name="Page2" component={()=><WildCard title="Page2"/>} />
+    <Tab.Navigator >
+      <Tab.Screen
+      initialRouteName="Home"
+      name="Repúblicas" component={Republics} 
+      options={{
+        tabBarLabel: 'Repúblicas',
+        tabBarIcon: ({ color }) => (
+          <MaterialCommunityIcons name="home" color={color} size={26} />
+        ),
+        
+      }}
+      
+      />
+      <Tab.Screen
+        name="Profile"
+        component={User}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" color={color} size={26} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
