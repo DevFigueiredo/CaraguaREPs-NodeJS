@@ -2,18 +2,16 @@ import * as React from 'react';
 import {Text, View, TextInput,ScrollView, Image, StatusBar, SafeAreaView, FlatList } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
-
-function Separator({space}){
- return(<View style={{height: space}}></View>)
-}
+import Separator from '../../components/Separator';
 var republics = [
-  { id: "00", name: "Relâmpago McQueen", price: 200, city:"Caraguatatuba" },
-  { id: "01", name: "Agente Tom Mate", price: 250, city:"Caraguatatuba" },
-  { id: "02", name: "Doc Hudson", price: 300, city:"Caraguatatuba" },
-  { id: "04", name: "Coalas Ramirez", price: 450, city:"Caraguatatuba" },
-  { id: "05", name: "Rep do Além", price: 450, city:"Caraguatatuba" },
-  { id: "06", name: "Os caras", price: 450, city:"Caraguatatuba" },
-  { id: "07", name: "As minas", price: 450, city:"Caraguatatuba" },
+  { id: "00", name: "Relâmpago McQueen", price: 200, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "01", name: "Agente Tom Mate", price: 250, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "02", name: "Doc Hudson", price: 300, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "04", name: "Coalas Ramirez", price: 450, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "05", name: "Rep do Além", price: 450, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "06", name: "Os caras", price: 450, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "07", name: "As minas", price: 470, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "08", name: "As mi2nas", price: 470, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
 ];
 
 var filters = [
@@ -28,6 +26,8 @@ var filters = [
 
 
 function Republic({data}){
+  var results = Object.keys(data).length;
+  var image;
   return (
     <SafeAreaView style={styles.scrollView}>
 
@@ -37,6 +37,7 @@ function Republic({data}){
       keyExtractor={item => item.id}
       renderItem={({ item }) => {
         return (
+          
           <View style={styles.Republic}>
           <Text style={styles.RepublicTitle}>
             {item.name}
@@ -44,14 +45,14 @@ function Republic({data}){
           <View style={styles.ImageRepublicDetail}>
           <Image
           style={styles.ImageRepublic}
-          source={require('../../images/RepublicList/RepublicExample.png')}
+          source={item.primary}
           />
          </View>
          <View style={styles.RepublicDescription} >
          <View style={styles.RepublicLocationIcon}>
          <Image
          style={{width: 15,height: 18}}
-          source={require('../../images/RepublicList/Location.png')}
+          source={image}
           />
           </View>
          <View style={styles.RepublicDescriptionText}>
@@ -84,7 +85,7 @@ return(
     keyExtractor={item => item.id}
     renderItem={({ item }) => {
       return (
-<Text style={styles.TextFiltered}>Masculina</Text>
+<Text style={styles.TextFiltered}>{item.name}</Text>
       );
     }}
   />
@@ -98,9 +99,9 @@ return(
 export default function Republics( {navigation} ) {
 
   return (
-<View>
-<StatusBar backgroundColor="#2085A8" barStyle="light-content" />
 
+<View>
+<StatusBar/>
 <View style={styles.Navbar}>
 
 <Separator space={10}/>
@@ -134,7 +135,7 @@ export default function Republics( {navigation} ) {
 <View style={styles.container}>
 <View style={styles.ListRepublics}>
 
-<Republic data = {republics}></Republic>
+<Republic data = {republics}/>
 
 </View>
 </View>

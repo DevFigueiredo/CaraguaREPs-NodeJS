@@ -61,7 +61,6 @@ import * as Font from 'expo-font';
       color: '#8F92A1',
       textAlign: 'center',
       marginRight: 10,
-      maxWidth: 80,
       fontSize: 14,
       borderRadius: 4,
      backgroundColor: '#F4F4F5',
@@ -75,8 +74,6 @@ import * as Font from 'expo-font';
      flexWrap:'wrap',
     },
     Republic:{
-      marginEnd: 'auto',
-      flexDirection: 'column',
       marginBottom: 30,
       maxWidth: 400,
       width: '100%',
