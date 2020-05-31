@@ -22,7 +22,7 @@
 
 - ***Técnologias***
 > - **Backend**: *NodeJS, Express, JWT, BCrypt, WebSocket, Cors, Mongoose, MongoDB, NodeMailer, Path*
-- _API's:
+- _API's:_
 - [x] Cadastro de Usuário
 - [x] Autenticação de Usuário
 - [x] Esqueci Minha Senha por E-mail
@@ -35,18 +35,19 @@
 - [x] **Finalizado Rota de Republicas e suas subrotas**
 - [x] **Inserido em todas as rotas o uso do JWT**
 > - **FrontEnd Mobile**: *React, React Native, Expo, React Navigation(Material Bottom Tabs / Native / Stack), Fontes Roboto e Monteserrat*
-- [ ] Página de Cadastro de Usuário
-- [x] Página de Login
-- [ ] Página de Esqueci Minha Senha
-- [ ] Págin de Reset de Senha
-- [x] Página de Listagem de Repúblicas 
-- [x] Página de Visualizaçao da República
-- [x] Página de Listagem de Mensagens
-- [ ] Página de Visualizar a Mensagem
-- [ ] Página de Informações do Usuário
-- [ ] Página de Editar Usuário
-- [ ] Página de Cadastro de República
-- [ ] Página de Edição de República
+- _Página de:_
+- [ ]  Cadastro de Usuário
+- [x]  Login
+- [ ]  Esqueci Minha Senha
+- [ ]  Reset de Senha
+- [x]  Listagem de Repúblicas 
+- [x]  Visualizaçao da República
+- [x]  Listagem de Mensagens
+- [ ]  Visualizar a Mensagem
+- [ ]  Informações do Usuário
+- [ ]  Editar Usuário
+- [ ]  Cadastro de República
+- [ ]  Edição de República
 
 
 > - **FrontEnd Web:** *Aguardando desenvolvimento...*
