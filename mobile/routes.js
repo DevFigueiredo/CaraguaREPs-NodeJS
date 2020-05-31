@@ -7,8 +7,10 @@ import {Text} from 'react-native'
 import Login from './src/pages/Login';
 import Principal from './routes/bottomMenu.routes';
 import Message from './src/pages/Message';
+import Republic from './src/pages/Republic';
 
- const AppStack = createStackNavigator();
+const AppStack = createStackNavigator();
+const App = createStackNavigator();
 
 export default function Routes() {
   return (
@@ -22,7 +24,8 @@ export default function Routes() {
     
     <AppStack.Screen name="Login" component={Login} options={{headerShown:false}} />
     <AppStack.Screen name="Home" component={Principal} options={{headerShown:false}} />
-    <AppStack.Screen name="Message" component={Message} />
+    <App.Screen name="Message" component={Message} />
+    <App.Screen name="Republic" component={Republic} />
  
     </AppStack.Navigator>
     </NavigationContainer>
