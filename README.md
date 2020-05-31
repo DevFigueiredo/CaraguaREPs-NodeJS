@@ -22,4 +22,6 @@ Projeto criado no intuito de auxiliar repúblicas estudantis que estão precisan
 
 
 > Imagens do App:
-![Página de Login](/projectImages/LoginPage.jpeg =100x20)
+![Página de Login](/projectImages/LoginPage.jpeg)
+![Página de Repúblicas](/projectImages/RepublicList's.jpeg)
+![Página de Mensagens](/projectImages/MessagesOfUser.jpeg)
