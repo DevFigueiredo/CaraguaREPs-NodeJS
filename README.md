@@ -21,9 +21,9 @@ Projeto criado no intuito de auxiliar repúblicas estudantis que estão precisan
 *Somente um desenvolvedor amante de tudo que existe no mundo de tecnologia, e apredendo cada dia procurando sempre obter novos conhecimentos. Gosto de ajudar pessoas da melhor forma que puder*
 
 - ***Técnologias***
-> **FrontEnd Mobile**: *React, React Native, Expo, React Navigation(Material Bottom Tabs / Native / Stack), Fontes Roboto e Monteserrat*
-> **Backend**: *NodeJS, Express, JWT, BCrypt, WebSocket, Cors, Mongoose, MongoDB, NodeMailer, Path*
-> **Frondend Web:** *Aguardando desenvolvimento...*
+> - **FrontEnd Mobile**: *React, React Native, Expo, React Navigation(Material Bottom Tabs / Native / Stack), Fontes Roboto e Monteserrat*
+> - **Backend**: *NodeJS, Express, JWT, BCrypt, WebSocket, Cors, Mongoose, MongoDB, NodeMailer, Path*
+> - **Frondend Web:** *Aguardando desenvolvimento...*
 
 > Imagens do App:
 ![Página de Login](/projectImages/LoginPage.jpeg)
