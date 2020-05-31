@@ -52,7 +52,7 @@ function Republic({data}){
          <View style={styles.RepublicLocationIcon}>
          <Image
          style={{width: 15,height: 18}}
-          source={image}
+          source={require('../../images/RepublicList/Location.png')}
           />
           </View>
          <View style={styles.RepublicDescriptionText}>
