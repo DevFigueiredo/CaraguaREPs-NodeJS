@@ -21,4 +21,4 @@ Projeto criado no intuito de auxiliar repúblicas estudantis que estão precisan
 
 
 > Imagens do App:
-![Página de Login](/projectImagesLoginPage.jpeg)
+![Página de Login](/projectImages/LoginPage.jpeg)
