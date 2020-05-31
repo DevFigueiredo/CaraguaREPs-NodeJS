@@ -83,9 +83,10 @@ export default function ListMessages( {navigation} ) {
 
 <View style={styles.MessagesBackground}>
 <View style={styles.container}>
-<Message data={messages} navigation={navigation}  />
-</View>
 
+<Message data={messages} navigation={navigation}  />
+
+</View>
 </View>
 
 <Separator space={120}/>
