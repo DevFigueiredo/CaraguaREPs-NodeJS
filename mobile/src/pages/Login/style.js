@@ -110,11 +110,6 @@ import { max } from 'react-native-reanimated';
         borderWidth: 2,
         borderColor: '#E0E0E0',
         },
-       
-
-
-
-
 },
    Font.loadAsync({
     RobotoThin: {
@@ -126,7 +121,10 @@ import { max } from 'react-native-reanimated';
     RobotoBlack: {
         uri: require('../../assets/fonts/Roboto-Black.ttf'),
     }
-  })
+  }).catch(
+    console.log('Fontes carregadas')
+  ),
+  
   
   
   );
