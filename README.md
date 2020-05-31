@@ -21,8 +21,34 @@
 *Somente um desenvolvedor amante de tudo que existe no mundo de tecnologia, e aprendendo cada dia procurando sempre obter novos conhecimentos. Gosto de ajudar pessoas da melhor forma que puder!*
 
 - ***Técnologias***
-> - **FrontEnd Mobile**: *React, React Native, Expo, React Navigation(Material Bottom Tabs / Native / Stack), Fontes Roboto e Monteserrat*
 > - **Backend**: *NodeJS, Express, JWT, BCrypt, WebSocket, Cors, Mongoose, MongoDB, NodeMailer, Path*
+- _API's:
+- [x] Cadastro de Usuário
+- [x] Autenticação de Usuário
+- [x] Esqueci Minha Senha por E-mail
+- [x] Resetar a Senha 
+- [x] **Finalizado Rota de Autenticação e suas subrotas**
+- [x] Cadastro de República
+- [x] Consulta de República
+- [x] Consulta de República Especifica
+- [x] Atualização de dados da República
+- [x] **Finalizado Rota de Republicas e suas subrotas**
+- [x] **Inserido em todas as rotas o uso do JWT**
+> - **FrontEnd Mobile**: *React, React Native, Expo, React Navigation(Material Bottom Tabs / Native / Stack), Fontes Roboto e Monteserrat*
+- [ ] Página de Cadastro de Usuário
+- [x] Página de Login
+- [ ] Página de Esqueci Minha Senha
+- [ ] Págin de Reset de Senha
+- [x] Página de Listagem de Repúblicas 
+- [x] Página de Visualizaçao da República
+- [x] Página de Listagem de Mensagens
+- [ ] Página de Visualizar a Mensagem
+- [ ] Página de Informações do Usuário
+- [ ] Página de Editar Usuário
+- [ ] Página de Cadastro de República
+- [ ] Página de Edição de República
+
+
 > - **FrontEnd Web:** *Aguardando desenvolvimento...*
 
 > Imagens do App:
