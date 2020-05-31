@@ -14,9 +14,14 @@ const Tab = createMaterialBottomTabNavigator();
 
 export default function Home() {
   return (
-    <Tab.Navigator >
+    <Tab.Navigator 
+    barStyle={{ backgroundColor: '#FFF' }}
+
+    >
+
       <Tab.Screen
       initialRouteName="Home"
+      
       name="Repúblicas" component={Republics} 
       options={{
         tabBarLabel: 'Repúblicas',
