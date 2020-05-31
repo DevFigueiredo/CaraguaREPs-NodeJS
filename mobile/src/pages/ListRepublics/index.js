@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, View, TextInput,ScrollView, Image, StatusBar, SafeAreaView, FlatList } from 'react-native';
+import {Text, View, TextInput,ScrollView, Image, StatusBar, SafeAreaView, FlatList, TouchableHighlight } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import Separator from '../../components/Separator';
@@ -25,7 +25,7 @@ var filters = [
 ];
 
 
-function Republic({data}){
+function Republic({data, navigation}){
   var results = Object.keys(data).length;
   var image;
   return (
@@ -36,8 +36,13 @@ function Republic({data}){
       data={data}
       keyExtractor={item => item.id}
       renderItem={({ item }) => {
+        function navigateToRepublic(){
+          navigation.navigate('Republic',{
+            republicId: item.id,
+          })
+        }
         return (
-          
+    <TouchableHighlight onPress={navigateToRepublic} >
           <View style={styles.Republic}>
           <Text style={styles.RepublicTitle}>
             {item.name}
@@ -66,11 +71,12 @@ function Republic({data}){
          </View>
          </View>
         </View>
+        </TouchableHighlight>
         );
       }}
     />
-    
   </SafeAreaView>
+  
   );
   
 }
@@ -135,7 +141,7 @@ export default function ListRepublics( {navigation} ) {
 <View style={styles.container}>
 <View style={styles.ListRepublics}>
 
-<Republic data = {republics}/>
+<Republic data = {republics} navigation={navigation}/>
 
 </View>
 </View>
