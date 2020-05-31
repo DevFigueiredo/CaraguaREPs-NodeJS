@@ -23,7 +23,7 @@ Projeto criado no intuito de auxiliar repúblicas estudantis que estão precisan
 - ***Técnologias***
 > - **FrontEnd Mobile**: *React, React Native, Expo, React Navigation(Material Bottom Tabs / Native / Stack), Fontes Roboto e Monteserrat*
 > - **Backend**: *NodeJS, Express, JWT, BCrypt, WebSocket, Cors, Mongoose, MongoDB, NodeMailer, Path*
-> - **Frondend Web:** *Aguardando desenvolvimento...*
+> - **Frontdend Web:** *Aguardando desenvolvimento...*
 
 > Imagens do App:
 ![Página de Login](/projectImages/LoginPage.jpeg)
