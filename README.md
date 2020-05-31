@@ -13,8 +13,8 @@ Projeto criado no intuito de auxiliar repúblicas estudantis que estão precisan
 
 - **_Autor:_** Daniel Miranda de Figueiredo
 - **_E-Mail:_** devfigueiredo@gmail.com
-- **_LinkedIn:_** [LinkedIn](https://www.linkedin.com/in/daniel-miranda-519191156/)**
-- **_Github:_** [GitHub](https://github.com/DevFigueiredo)**
+- **_LinkedIn:_** **[LinkedIn](https://www.linkedin.com/in/daniel-miranda-519191156/)**
+- **_Github:_** **[GitHub](https://github.com/DevFigueiredo)**
 
 **_Quem sou eu?_**
 *Somente um desenvolvedor amante de tudo que existe no mundo de tecnologia, e apredendo cada dia procurando sempre obter novos conhecimentos. Gosto de ajudar pessoas da melhor forma que puder*
