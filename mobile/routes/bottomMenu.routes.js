@@ -22,7 +22,7 @@ export default function Home() {
       <Tab.Screen
       initialRouteName="Home"
       
-      name="Repúblicas" component={ListRepublics} 
+      name="Republicas" component={ListRepublics} 
       options={{
         tabBarLabel: 'Repúblicas',
         tabBarIcon: ({ color }) => (
