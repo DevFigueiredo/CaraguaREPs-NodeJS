@@ -4,9 +4,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {Text, View} from 'react-native';
-import Republics from '../src/pages/Republics';
+import ListRepublics from '../src/pages/ListRepublics';
 import User from '../src/pages/User';
-import Messages from '../src/pages/UserMessages';
+import Messages from '../src/pages/ListMessages';
 
 
 
@@ -22,7 +22,7 @@ export default function Home() {
       <Tab.Screen
       initialRouteName="Home"
       
-      name="Repúblicas" component={Republics} 
+      name="Repúblicas" component={ListRepublics} 
       options={{
         tabBarLabel: 'Repúblicas',
         tabBarIcon: ({ color }) => (
