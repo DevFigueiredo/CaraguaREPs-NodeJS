@@ -96,7 +96,7 @@ return(
 );
 }
 
-export default function Republics( {navigation} ) {
+export default function ListRepublics( {navigation} ) {
 
   return (
 

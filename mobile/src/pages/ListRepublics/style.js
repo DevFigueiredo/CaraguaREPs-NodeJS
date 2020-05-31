@@ -27,7 +27,6 @@ import * as Font from 'expo-font';
       justifyContent: 'center',
       height: 50,
       alignItems: 'center',
-      
     },
     Search:{
      flexDirection:'column',
@@ -63,9 +62,9 @@ import * as Font from 'expo-font';
       marginRight: 10,
       fontSize: 14,
       borderRadius: 4,
-     backgroundColor: '#F4F4F5',
-     paddingHorizontal: 6,
-     paddingVertical: 4
+      backgroundColor: '#F4F4F5',
+      paddingHorizontal: 6,
+      paddingVertical: 4
     },
     ListRepublics:{
      paddingTop: 10,
@@ -104,15 +103,15 @@ import * as Font from 'expo-font';
    height: 30,
    flexDirection: 'row',
    alignItems: 'flex-start',
-  alignItems: 'center', 
-  position: 'relative',
+   alignItems: 'center', 
+   position: 'relative',
  },
  RepublicLocationIcon:{
    width:25, 
    height: '100%', 
-  alignItems: 'center', 
-  position: 'relative',
-  justifyContent: 'center',
+   alignItems: 'center', 
+   position: 'relative',
+   justifyContent: 'center',
 },
 RepublicDescriptionText:{
   height: '100%', 
