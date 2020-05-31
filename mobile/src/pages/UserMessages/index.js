@@ -5,19 +5,19 @@ import { useNavigation } from '@react-navigation/native';
 import Separator from '../../components/Separator';
 
 var messages = [
-  { id: "01", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "02", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "03", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "04", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "05", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "06", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "07", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "08", name: "As minas10", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "09", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "10", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "11", name: "As minas", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "12", name: "As minas12", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
-  { id: "13", name: "As minas13", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "01", name: "Republica 01", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "02", name: "Republica 02", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "03", name: "Republica 03", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "04", name: "Republica 04", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "05", name: "Republica 05", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "06", name: "Republica 06", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "07", name: "Republica 07", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "08", name: "Republica 08", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "09", name: "Republica 09", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "10", name: "Republica 10", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "11", name: "Republica 11", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "12", name: "Republica 12", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
+  { id: "13", name: "Republica 14", message:"Oi, tudo bem com você ?", primary: require('../../images/Users/daniel.jpg'), lastMessageTime:"23:30"  },
 
 ]
 
