@@ -1,11 +1,12 @@
 import * as React from 'react';
-import {Text, View, SafeAreaView, ScrollView } from 'react-native';
+import {Text, View, ScrollView, TouchableHighlight } from 'react-native';
 import styles from './style';
 import { SliderBox } from "react-native-image-slider-box";
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import { Icon } from 'react-native-elements'
 import { CheckBox } from 'react-native-elements'
+import Separator from '../../components/Separator';
 
 
 
@@ -34,6 +35,7 @@ var infoRepublic = {
 export default function Republic( {navigation} ) {
 
   return (
+    <View>
 <ScrollView>
   <View>
 <SliderBox
@@ -220,10 +222,28 @@ Rep apenas para meninas, bairro populoso sem perigo, rua próxima a feira de qui
 </View>
 
 </View>
-
 </View> 
- </ScrollView>
+<Separator space={80} />
 
+</ScrollView>
+
+      <View style={styles.Footer}>
+        <View style={styles.FooterContainer}>
+
+    <TouchableHighlight style={styles.Button}>
+      
+    <Text style={styles.TextLoginButton} >Inscrever-se</Text>  
+    </TouchableHighlight>
+    
+
+    
+    <TouchableHighlight style={styles.Button}>
+    <Text style={styles.TextLoginButton} >Conversar</Text>  
+    </TouchableHighlight>
+    
+         </View>
+      </View>
+      </View>
   );
 
 }

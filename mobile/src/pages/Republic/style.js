@@ -80,7 +80,45 @@ import * as Font from 'expo-font';
     Share:{
         flexDirection: 'row',
         
-    }
+    },
+    Footer:{
+        flex:1,
+        width: '100%',
+    },
+    FooterContainer:{
+        flexDirection: 'row',
+        borderWidth:0,
+        position:'absolute',
+        bottom:0,
+        alignSelf:'flex-end', 
+        backgroundColor: '#FFF',
+        width: '100%',
+         height: 80,
+         paddingHorizontal: 24,
+    },
+    Button:{
+        marginTop: 15,
+        marginEnd: 'auto',
+        marginStart: 'auto',
+
+    },
+    TextLoginButton:{
+    paddingTop:15,
+    fontFamily: 'RobotoThin',
+    fontWeight: 'bold',
+    fontStyle: 'normal',    
+    width: 150,
+    justifyContent: 'center',
+    height: 55,
+    fontSize: 16,
+    paddingBottom:4,
+    color:'#fff',
+    textAlign:'center',
+    backgroundColor:'#049FFF',
+    borderRadius: 60,
+    borderWidth: 0,
+    },
+
     
 
     
