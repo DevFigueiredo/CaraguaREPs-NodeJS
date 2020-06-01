@@ -2,11 +2,11 @@ import * as React from 'react';
 import {Text, View, TextInput,ScrollView, ImageBackground, TouchableHighlight } from 'react-native';
 import styles from './style';
 
-
 export default function Login( {navigation} ) {
 
   return (
     <ScrollView style={styles.scrollView}>
+
     <View style={styles.TopLogin}>
     <ImageBackground
     source={require('../../images/estudantes.jpg')}

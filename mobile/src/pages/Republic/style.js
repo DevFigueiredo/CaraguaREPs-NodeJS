@@ -6,8 +6,8 @@ import * as Font from 'expo-font';
         backgroundColor: '#FFF'
      },
      container:{
-     paddingHorizontal: 24
-
+     paddingHorizontal: 24,
+     backgroundColor: '#FFF'
      },
      TopInfo:{
       width: '100%',
@@ -17,8 +17,7 @@ import * as Font from 'expo-font';
     Title:{
         paddingTop: 10, 
         width: '70%',
-        justifyContent: 'center',
-        
+        justifyContent: 'center',    
     },
     TitleText:{
     fontSize: 20,
@@ -47,29 +46,48 @@ import * as Font from 'expo-font';
     section:{
         paddingBottom: 20,
     },
+    Icons:{
+     width: '100%',
+     flexDirection: 'row',
+    },
+    Icon:{
+     width: '25%',
+     alignItems: 'center',
+     justifyContent: 'flex-end'
+    },
     description: {
     fontSize: 13,
-    color: '#BCBDC7'
+    color: '#9698A6'
     },
+    TextIcons:{
+    fontSize: 12,
+    
+    color: '#9698A6'
+
+    },
+    Comfort:{
+        flexDirection: 'row',
+    },
+    HalfSection:{
+        width:'50%',
+        alignItems: 'flex-start'    
+    },
+    CheckBoxContainer:{
+        marginLeft: -5,
+        backgroundColor: '#FFF',
+        borderWidth: 0,
+    },
+    Share:{
+        flexDirection: 'row',
+        
+    }
     
 
     
 },
-   Font.loadAsync({
-    RobotoThin: {
-      uri: require('../../assets/fonts/Roboto-Thin.ttf'),
-    },
-    RobotoLight: {
-        uri: require('../../assets/fonts/Roboto-Light.ttf'),
-    },
-    RobotoBlack: {
-        uri: require('../../assets/fonts/Roboto-Black.ttf'),
-    },     
-  }).catch(
-    console.log('Fontes carregadas')
-  ),
   
   
   
   );
+ 
   

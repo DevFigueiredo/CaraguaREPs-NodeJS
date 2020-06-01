@@ -4,14 +4,14 @@ import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import Separator from '../../components/Separator';
 var republics = [
-  { id: "00", name: "Relâmpago McQueen", price: 200, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
-  { id: "01", name: "Agente Tom Mate", price: 250, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "00", name: "Relâmpago McQueen", price: 200, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample2.jpg") },
+  { id: "01", name: "Agente Tom Mate", price: 250, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample3.jpg") },
   { id: "02", name: "Doc Hudson", price: 300, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
   { id: "04", name: "Coalas Ramirez", price: 450, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
-  { id: "05", name: "Rep do Além", price: 450, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "05", name: "Rep do Além", price: 450, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample4.jpg") },
   { id: "06", name: "Os caras", price: 450, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
-  { id: "07", name: "As minas", price: 470, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
-  { id: "08", name: "As mi2nas", price: 470, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample.png") },
+  { id: "07", name: "As minas", price: 470, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample2.jpg") },
+  { id: "08", name: "As mi2nas", price: 470, city:"Caraguatatuba", primary: require("../../images/RepublicList/RepublicExample3.jpg") },
 ];
 
 var filters = [
