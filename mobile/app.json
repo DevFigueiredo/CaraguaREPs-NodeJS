@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "CaraguaREPs",
-    "slug": "frontend",
+    "description": "O aplicativo de repúblicas que você não perde tempo. Achou! Apegou!",
+    "slug": "mobile",
     "platforms": [
       "ios",
       "android",
