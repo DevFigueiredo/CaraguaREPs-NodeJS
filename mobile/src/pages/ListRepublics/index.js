@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {Text, View, TextInput,ScrollView, Image, StatusBar, SafeAreaView, FlatList, TouchableHighlight } from 'react-native';
+import React, {useState} from 'react';
+import {Text, View, TextInput,ScrollView,RefreshControl, Image, StatusBar, SafeAreaView, FlatList, TouchableHighlight } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import Separator from '../../components/Separator';
@@ -27,22 +27,48 @@ var filters = [
 
 function Republic({data, navigation}){
   var results = Object.keys(data).length;
-  var image;
+
+
+
+  function WaitRefresh(timeout) {
+    return new Promise(resolve => {
+      setTimeout(resolve, timeout);
+    });
+  }
+  const [refreshing, setRefreshing] = React.useState(false);
+
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true);
+  
+    WaitRefresh(2000).then(() => setRefreshing(false));
+  }, [refreshing]);
+  
+
+  
   return (
     <SafeAreaView style={styles.scrollView}>
 
     <FlatList
-      showsVerticalScrollIndicator={false}
+    //Importa componente que realiza o recarregamento da página
+    refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+    //Retira o Scroll Vertical da listagem
+    showsVerticalScrollIndicator={false}
+    //Array com os dados das republicas
       data={data}
+      //Define um ID de acordo com a array pra cada uma para realizar o mapeamento
       keyExtractor={item => item.id}
+      //Renderiza o Item
       renderItem={({ item }) => {
+
+        //Função para realizar navegação das rotas
         function navigateToRepublic(){
           navigation.navigate('Republic',{
             republicId: item.id,
           })
         }
+        //Retorno da Lista
         return (
-    <TouchableHighlight onPress={navigateToRepublic} >
+          <TouchableHighlight onPress={navigateToRepublic} >
           <View style={styles.Republic}>
           <Text style={styles.RepublicTitle}>
             {item.name}
@@ -80,16 +106,22 @@ function Republic({data, navigation}){
   );
   
 }
-
+//Função que realiza a listagem dos filtros de pesquisa aplicados
 function Filter ({data}){
 return(
-
   <FlatList
+    //Retirado o scroll horizontal
     showsHorizontalScrollIndicator={false}
+    //Armaneza a array com os filtros aplicados
     data={data}
+    //Informa que a lista será vertical
     horizontal={true}
+    //Extrai o Id de cada item da lista de filtros
     keyExtractor={item => item.id}
+    //Renderiza o item
     renderItem={({ item }) => {
+
+      //Retorno que mostra os filtros aplicados
       return (
 <Text style={styles.TextFiltered}>{item.name}</Text>
       );
@@ -102,11 +134,15 @@ return(
 );
 }
 
+
+
 export default function ListRepublics( {navigation} ) {
 
+  
+  
   return (
 
-<View>
+<View >
 <StatusBar/>
 <View style={styles.Navbar}>
 
